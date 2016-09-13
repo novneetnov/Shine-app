@@ -1,0 +1,17 @@
+<article ng-app="angular_test">
+	<header>
+		<h1 ng-if="name">Hello, {{name}}</h1>
+	</header>
+	<section>
+		<%= form_tag nil, class: "form-inline" do %>	
+			<div class="form-group">
+				<%= label_tag "name", "Name" %>
+				<%= text_field_tag 'name', nil, 
+													 placeholder: "Enter your name", 
+													 class: "form-control", 
+													 autofocus: true,
+													 "ng-model": "name" %>
+			</div>
+		<% end %>
+	</section>
+</article>
